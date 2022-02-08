@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class alanHesabi {
+    public static void main(String[] args) {
+
+        int taban,yükseklik;
+        double alan;
+
+        Scanner Klavye = new Scanner(System.in);
+        System.out.println("Taban Değeri : ");
+        taban = Klavye.nextInt();
+
+        System.out.println("Yükseklik Değeri : ");
+        yükseklik = Klavye.nextInt();
+
+        alan = (taban * yükseklik) / 2;
+        System.out.println("Üçgenin Alanı :" + alan);
+    }
+}

@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class vucutKiloIndeksi {
+    public static void main(String[] args) {
+        double boy,kilo;
+
+        Scanner inp= new Scanner(System.in);
+
+        System.out.print("Boy değerlerinizi giriniz : ");
+        boy = inp.nextDouble();
+
+        System.out.print("Kilo değerlerinizi giriniz : ");
+        kilo = inp.nextDouble();
+
+        double formul = kilo / (boy * boy);
+
+        System.out.println("Vücut Kilo İndeksi : " + formul);
+    }
+}

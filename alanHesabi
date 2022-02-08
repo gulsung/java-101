@@ -3,17 +3,24 @@ import java.util.Scanner;
 public class alanHesabi {
     public static void main(String[] args) {
 
-        int taban,yükseklik;
-        double alan;
+        double kenar1, kenar2, kenar3, u, alan;
 
-        Scanner Klavye = new Scanner(System.in);
-        System.out.println("Taban Değeri : ");
-        taban = Klavye.nextInt();
 
-        System.out.println("Yükseklik Değeri : ");
-        yükseklik = Klavye.nextInt();
+        Scanner girdi1 = new Scanner(System.in);
+        System.out.println("ilk kenarı giriniz :");
+        kenar1 = girdi1.nextDouble();
 
-        alan = (taban * yükseklik) / 2;
-        System.out.println("Üçgenin Alanı :" + alan);
+        Scanner girdi2 = new Scanner(System.in);
+        System.out.println("ikinci kenarı giriniz : ");
+        kenar2 = girdi2.nextDouble();
+
+        Scanner girdi3 = new Scanner(System.in);
+        System.out.println("üçüncü kenarı giriniz : ");
+        kenar3 = girdi3.nextDouble();
+        u = (kenar1 + kenar2 + kenar3) / 2;
+
+        alan =Math.sqrt(u * (u - kenar1)* (u - kenar2) * (u - kenar3)) ;
+
+        System.out.print("alan : " + alan);
     }
 }

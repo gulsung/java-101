@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class kombinasyonBulma {
+    public static void main(String[] args) {
+
+
+        Scanner scan = new Scanner(System.in);
+        int n,r;
+        int fakn = 1;
+        int fakr = 1;
+        int fakj = 1;
+
+
+        System.out.print("n değerini giriniz : ");
+        n = scan.nextInt();
+        for (int i = 1; i <= n; i++){
+            fakn *= i;
+        }
+
+        System.out.print("r değerini giriniz : ");
+        r = scan.nextInt();
+        for (int k = 1; k <= r; k++){
+            fakr *= k;
+        }
+        for (int j = 1; j <= n - r; j++) {
+
+            fakj *= j;
+        }
+
+        int sonuc = (fakn) / (fakr * fakj);
+        System.out.println("C(" + (n) + "," + (r) + ")" + "=" + sonuc);
+
+    }
+}

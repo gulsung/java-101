@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class sayininBasSayilarininTopBulma {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Tam Sayı giriniz:");
+        int num = input.nextInt();
+        int result = 0;
+        String numString= String.valueOf(num);
+        for(int i=0;i<numString.length();i++){
+            result= result+ Integer.parseInt(String.valueOf(numString.charAt(i)));
+        }
+        System.out.print("basamaklar toplamı="+result);
+    }
+}
